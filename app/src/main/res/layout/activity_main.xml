@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/titleContainer"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/uth" /> <!-- Asegúrate de reemplazar esto con tu imagen de logo -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sitios App"
+            android:textSize="24sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imagePlace"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@id/titleContainer"
+        />
+
+    <EditText
+        android:id="@+id/latitudeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Latitud"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/imagePlace"
+        android:padding="8dp"
+        android:background="@drawable/edittext_border"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/longitudeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Longitud"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/latitudeEditText"
+        android:padding="8dp"
+        android:background="@drawable/edittext_border"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"
+        android:minHeight="100dp"
+        android:padding="8dp"
+        android:lines="5"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:background="@drawable/edittext_border"
+        android:layout_below="@id/longitudeEditText"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionEditText"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar"
+            android:layout_marginEnd="20dp"/>
+
+        <Button
+            android:id="@+id/listSitesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lista Sitios" />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir App"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/buttonContainer"
+        android:layout_marginTop="10dp"
+        android:onClick="onExitClick" />
+
+
+</RelativeLayout>
